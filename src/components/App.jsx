@@ -23,16 +23,16 @@ class App extends Component {
     });
   }
 
-  handleChangeName(name) {
-    this.setState({ name });
-  }
-  handleChangePhone(number) {
-    this.setState({ number });
-  }
+  // handleChangeName(name) {
+  //   this.setState({ name });
+  // }
+  // handleChangePhone(number) {
+  //   this.setState({ number });
+  // }
 
-  // handleChangeItem = (inputValue, value) => {
-  //   this.setState({ [inputValue]: value });
-  // };
+  handleChangeItem = (inputValue, value) => {
+    this.setState({ [inputValue]: value });
+  };
 
   handleFilter(filter) {
     this.setState({ filter });
@@ -79,11 +79,11 @@ class App extends Component {
         <h1>Phonebook</h1>
 
         <ContactForm
-          onAddContact={e => this.handleAddContact(e)}
-          onChangeName={e => this.handleChangeName(e)}
-          onChangePhone={e => this.handleChangePhone(e)}
-          // onChangeName={value => this.handleChangeItem('name', value)}
-          // onChangePhone={value => this.handleChangeItem('number', value)}
+          // onAddContact={e => this.handleAddContact(e)}
+          // onChangeName={e => this.handleChangeName(e)}
+          // onChangePhone={e => this.handleChangePhone(e)}
+          onChangeName={value => this.handleChangeItem('name', value)}
+          onChangePhone={value => this.handleChangeItem('number', value)}
         />
 
         <h2>Contacts</h2>

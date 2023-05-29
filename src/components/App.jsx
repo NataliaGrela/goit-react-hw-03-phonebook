@@ -79,7 +79,7 @@ class App extends Component {
         <h1>Phonebook</h1>
 
         <ContactForm
-          // onAddContact={e => this.handleAddContact(e)}
+          onAddContact={e => this.handleAddContact(e)}
           // onChangeName={e => this.handleChangeName(e)}
           // onChangePhone={e => this.handleChangePhone(e)}
           onChangeName={value => this.handleChangeItem('name', value)}

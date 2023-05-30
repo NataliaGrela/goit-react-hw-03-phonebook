@@ -6,7 +6,7 @@ class Filter extends Component {
   handleChange(e) {
     const { value } = e.currentTarget;
     const { onChangeFilter } = this.props;
-    onChangeFilter && onChangeFilter(value);
+    onChangeFilter(value);
   }
   render() {
     return (

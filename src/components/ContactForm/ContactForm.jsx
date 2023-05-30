@@ -5,17 +5,17 @@ import css from './ContactForm.module.css';
 class ContactForm extends Component {
   handleClick() {
     const { onAddContact } = this.props;
-    onAddContact && onAddContact();
+    onAddContact();
   }
   handleChangeName(e) {
     const { value } = e.currentTarget;
     const { onChangeName } = this.props;
-    onChangeName && onChangeName(value);
+    onChangeName(value);
   }
   handleChangePhone(e) {
     const { value } = e.currentTarget;
     const { onChangePhone } = this.props;
-    onChangePhone && onChangePhone(value);
+    onChangePhone(value);
   }
 
   handleSubmit = e => {

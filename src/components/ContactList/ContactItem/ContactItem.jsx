@@ -5,7 +5,7 @@ import css from './ContactItem.module.css';
 class ContactItem extends Component {
   handleClick() {
     const { onDelete, id } = this.props;
-    onDelete && onDelete(id);
+    onDelete(id);
   }
   render() {
     const { name, number } = this.props;

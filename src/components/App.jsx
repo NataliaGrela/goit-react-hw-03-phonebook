@@ -63,11 +63,11 @@ class App extends Component {
   }
 
   handleDeleteContact(id) {
-    const contactIndex = this.state.contacts.findIndex(item => item.id === id);
-    this.state.contacts.splice(contactIndex, 1);
-    this.setState(prevState => ({ contacts: [...prevState.contacts] }));
     const contacts = [...this.state.contacts];
+    const contactIndex = contacts.findIndex(item => item.id === id);
     contacts.splice(contactIndex, 1);
+    this.setState({ contacts: contacts });
+    console.log(contacts, contactIndex);
     localStorage.removeItem('contacts');
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }
